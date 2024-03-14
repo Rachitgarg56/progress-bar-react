@@ -5,12 +5,14 @@ import './ProgressBar.css';
 const ProgressBar = (props) => {
 
     const [percentage, SetPercentage] = useState(0);
+    const [width, setWidth] = useState(0);
     
     useEffect(()=> {
 
         setTimeout(() => {
 
             SetPercentage(percentage+1);
+            setWidth(width+1);
 
             if (percentage === 99) {
                 props.handleMessage();
@@ -22,7 +24,7 @@ const ProgressBar = (props) => {
 
     return (
         <div className='progress-bar'>
-            <div className='progress'>
+            <div className='progress' style={{width: width + "%"}}>
                 <span>{percentage + "%"}</span>
             </div>
         </div>

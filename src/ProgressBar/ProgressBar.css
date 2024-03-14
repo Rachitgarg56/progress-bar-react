@@ -18,14 +18,5 @@ span {
     width: 0;
     background-color: lightgreen;
     border-radius: 50px;
-    animation: load 21.9s linear forwards;
-}
-
-@keyframes load {
-    from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
+    transition: width 0.5s ease;
 }
