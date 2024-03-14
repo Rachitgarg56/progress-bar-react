@@ -1,0 +1,31 @@
+
+.progress-bar {
+    border: 1px solid #C5C5C5;
+    background-color: #E9ECEF;
+    width: 500px;
+    text-align: center;
+    border-radius: 50px;
+    position: relative;
+}
+
+span {
+    position: absolute;
+    left: 50%;
+}
+
+.progress {
+    height: 25px;
+    width: 0;
+    background-color: lightgreen;
+    border-radius: 50px;
+    animation: load 21.9s linear forwards;
+}
+
+@keyframes load {
+    from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+}
